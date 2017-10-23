@@ -12,4 +12,6 @@ class CashRegister
     @@items << title
   end
 
+  
+
 end
