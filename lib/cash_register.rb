@@ -24,7 +24,6 @@ class CashRegister
     else
       discount_percent = @discount.to_f / 100
       self.total -= self.total * discount_percent
-      self.total.to_i
       "After the discount, the total comes to $#{self.total}."
     end
   end
