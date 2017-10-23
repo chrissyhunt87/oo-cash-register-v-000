@@ -5,7 +5,7 @@ class CashRegister
   def initialize(discount=0)
     @total = 0
     @items = []
-    @discount = discount
+    apply_discount(discount)
   end
 
   def add_item(title, price, quantity=1)
@@ -13,7 +13,7 @@ class CashRegister
     @items << title
   end
 
-  def apply_discount
+  def apply_discount(discount)
     discount_percent = @discount / 100
     new_total = @total * discount_percent
   end
