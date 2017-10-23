@@ -1,4 +1,3 @@
-require 'pry'
 class CashRegister
   attr_accessor :total
 
@@ -6,7 +5,6 @@ class CashRegister
     @total = 0
     @discount = discount
     @items = []
-    binding.pry
     self.apply_discount(@discount)
   end
 
