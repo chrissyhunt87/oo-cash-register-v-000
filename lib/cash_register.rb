@@ -5,7 +5,7 @@ class CashRegister
     @total = 0
     @discount = discount
     @items = []
-    self.apply_discount(@discount)
+    self.apply_discount
   end
 
   def add_item(title, price, quantity=1)
@@ -13,8 +13,8 @@ class CashRegister
     @items << title
   end
 
-  def apply_discount(discount)
-    discount_percent = discount / 100
+  def apply_discount
+    discount_percent = @discount / 100
     new_total = @total * discount_percent
   end
 
