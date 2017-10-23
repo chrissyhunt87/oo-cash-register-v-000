@@ -1,3 +1,5 @@
+require 'pry'
+
 class CashRegister
   attr_accessor :total, :last_transaction_total, :discount
 
@@ -22,6 +24,7 @@ class CashRegister
     else
       discount_percent = @discount / 100
       self.total -= self.total * discount_percent
+      binding.pry
       "After the discount, the total comes to $#{self.total}."
     end
   end
